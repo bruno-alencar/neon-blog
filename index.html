@@ -7,7 +7,7 @@ layout: default
             {% include fique-azul.svg %}
         </div>
         <div id="arrow" class="text-center">
-          {% include icon-arrow.html %}  
+          {% include icon-arrow.html %}
         </div>
     </div>
 </section>
@@ -19,32 +19,19 @@ layout: default
     </header>
     <article class="container">
         <div class="row">
+        {% for post in site.posts limit:3 %}
             <div class="col-sm-6 col-md-4">
+            <a href="{{post.url}}">
                 <div class="thumbnail">
-                    <img data-src="holder.js/350x250auto=yes" alt="...">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>...</p>
+                        <img src="..." alt="...">
+                        <div class="caption">
+                            <h3 class="text-center">{{ post.title }}</h3>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img data-src="holder.js/350x250auto=yes" alt="...">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>...</p>
-                    </div>
-                </div>
-            </div><div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img data-src="holder.js/350x250auto=yes" alt="...">
-                    <div class="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>...</p>
-                    </div>
-                </div>
-            </div>
+                </div>  
+            </a>
+            
+        {% endfor %}    
         </div>  
     </article>
     
