@@ -10,20 +10,24 @@ layout: default
 	var init = function() {
 	  var id_token = localStorage.getItem('id_token');
 	  if (id_token) {
-	  }
-	  	lock.show({
-	      	allowedConnections: ["google-oauth2","facebook"],
-			theme: {"logo":"http://i.imgur.com/XfS6MuS.png","primaryColor":"#2196f3"},
-			languageDictionary: {"title":"Fique azul"},
-			language: "pt-br",
-			auth: {
-	      	redirectUrl: 'http://fiquezul.me/',
-	      	responseType: 'token',
-	      		params: {
-	        		scope: 'openid email'
-	      		}
-	    	}
-    	});
+	  	    lock.getProfile(id_token, function (err, profile) {
+		      if (err) {
+		        	  	lock.show({
+				      	allowedConnections: ["google-oauth2","facebook"],
+						theme: {"logo":"http://i.imgur.com/XfS6MuS.png","primaryColor":"#2196f3"},
+						languageDictionary: {"title":"Fique azul"},
+						language: "pt-br",
+						auth: {
+					    redirectUrl: 'http://fiquezul.me/',
+					    responseType: 'token',
+					    params: {
+					        scope: 'openid email'
+					      }
+				    	}
+			    		});
+		     	}
+	  		}
+	  	}
 	};
 init();
 </script>
