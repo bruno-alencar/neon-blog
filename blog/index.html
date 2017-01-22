@@ -1,7 +1,7 @@
 --- 
 layout: default 
 ---
-<div class="container blog-content">
+<div class="container all-posts">
 	<section class="col-md-3">
 	    <nav >
 	        <ul class="nav nav-pills nav-stacked">
@@ -12,11 +12,11 @@ layout: default
 	</section>
 	<section class="col-md-9 post-list">
 		{% for post in site.posts %}
-			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			<h3><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></h3>
 			{% if post.excerpt %}
                 {{ post.excerpt | markdownify }}
                 {% unless post.nomore or post.quote %}
-                    <p><a href="{{ post.url }}">
+                    <p><a href="{{site.url}}{{ post.url }}">
                         {% if post.language == "en" %}
                         <strong>Continue reading&#8230;</strong>
                         {% else %}
