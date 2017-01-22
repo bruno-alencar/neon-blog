@@ -12,9 +12,9 @@ dl, dd, ol, ul, figure {
 /**
  * Colors
  */
-$primary-blue-color: #02cbc4;
+$primary-blue-color: #2196F3;
 $accent-color: #00a6dd;
-
+$white-color: #ffffff; 
 
 /**
  * Basic styling
@@ -201,12 +201,12 @@ pre {
 
     > svg {
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 32px;
+        height: 32px;
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $white-color;
         }
     }
 }

@@ -24,22 +24,40 @@
 }
 
 .grad {
-    background: $primary-blue-color;
-    background: -webkit-linear-gradient(left top, $primary-blue-color, $accent-color);
-    background: -o-linear-gradient(bottom right, $primary-blue-color, $accent-color);
-    background: -moz-linear-gradient(bottom right, $primary-blue-color, $accent-color);
-    background: linear-gradient(to bottom right, $primary-blue-color, $accent-color);
+    background: $primary-blue-color url(../assets/images/bg_header.jpg) no-repeat center center;
+    @include media-query($on-palm) {
+        background: $primary-blue-color;
+        background: -webkit-linear-gradient(left top, $primary-blue-color, $accent-color);
+        background: -o-linear-gradient(bottom right, $primary-blue-color, $accent-color);
+        background: -moz-linear-gradient(bottom right, $primary-blue-color, $accent-color);
+        background: linear-gradient(to bottom right, $primary-blue-color, $accent-color);   
+    }
 }
 
-.neon-centered {
+.logo-centered {
     margin: 15% auto;
     width: 100%;
     text-align: center;
+    @include media-query($on-palm) {
+        margin: 0 auto;
+    }
 }
 
-.neon-centered svg {
+.logo-centered svg {
     width: 30vw;
     height: 30vh;
+    @include media-query($on-palm) {
+        width: 55vw;
+        height: 55vh;
+    }
+}
+
+#arrow {
+    font-size: 1.7em;
+    padding: 15px;
+    @include media-query($on-palm) {
+        font-size: 1.2em;
+    }
 }
 
 
@@ -187,4 +205,8 @@
     h1 {
         font-weight: 300;
     }
+}
+
+.light-text { 
+    color: $white-color;
 }
