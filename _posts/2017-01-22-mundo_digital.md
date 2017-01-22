@@ -5,7 +5,7 @@ title: Mundo digital sem taxa
 
 images:
 
-  - url: ../assets/images/mundo-sem-taxa.jpg
+  - url: /assets/images/mundo-sem-taxa.jpg
     alt: Moça segurando um café com telefone na mão
     title: Mundo sem taxas
 ---
