@@ -1,0 +1,33 @@
+--- 
+layout: default 
+---
+<div class="container blog-content">
+	<section class="col-md-3">
+	    <nav >
+	        <ul class="nav nav-pills nav-stacked">
+	            <li><a href="{{ site.url }}">Home</a></li>
+	            <li><a href="{{ site.baseurl }}">Blog</a></li>
+	        </ul>
+	    </nav>
+	</section>
+	<section class="col-md-9 post-list">
+		{% for post in site.posts %}
+			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			{% if post.excerpt %}
+                {{ post.excerpt | markdownify }}
+                {% unless post.nomore or post.quote %}
+                    <p><a href="{{ post.url }}">
+                        {% if post.language == "en" %}
+                        <strong>Continue reading&#8230;</strong>
+                        {% else %}
+                        <strong>Continue lendo&#8230;</strong>
+                        {% endif %}</a>
+                    </p>
+                {% endunless %}
+            {% else %}
+                {{ post.content }}
+            {% endif %}
+		{% endfor %}
+	</section>	
+</div>
+

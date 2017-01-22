@@ -5,11 +5,11 @@ description: > # this means to ignore newlines until "baseurl:"
   A Fique Azul é um Blog com conteúdos para você que está iniciando sua vida na área financeira 
   e quer estar sempre antenado nas melhores dicas para conseguir alcançar 
   todos os seus sonhos e objetivos.
-baseurl: /neon-blog # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://startops7.github.io/neon-blog" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-permalink:   /neon-blog/:title/
+permalink: /blog/:title/

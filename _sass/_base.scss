@@ -217,6 +217,9 @@ pre {
         width: 145px;
         vertical-align: middle;
         float: right;
+        @include media-query($on-palm) {
+            float: left;
+        }
     }
 }
 

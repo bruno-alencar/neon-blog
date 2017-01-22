@@ -1,7 +1,6 @@
 /**
  * Site header
  */
-
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -134,6 +133,20 @@
  * Page content
  */
 
+ .post {
+    margin: 0 auto;
+    padding-right: 80px;
+    padding-left: 80px;
+    @include media-query($on-palm) {
+        padding-right: 40px;
+        padding-left: 40px;
+    } 
+
+    p {
+        font-size: 1.2  em;
+    }
+ }
+
 .page-content {
     padding: $spacing-unit 0;
 }
@@ -158,6 +171,16 @@
 .post-link {
     display: block;
     font-size: 24px;
+}
+
+.post-btn {
+    position: fixed;
+    right: 35px;
+    top: 55px;
+}
+
+.blog-content {
+    padding: 35px 15px;
 }
 
 
