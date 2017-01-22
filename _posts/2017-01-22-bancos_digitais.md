@@ -2,6 +2,12 @@
 layout: post
 title: Bancos 100% digitais que você precisa conhecer
 author: Karina & Raiane
+
+images:
+
+  - url: /assets/images/bancos-digitais.jpg
+    alt: Smartphone gigante com várias pessoas em volta
+    title: Bancos digitais
 ---
 
 <p>Pense na comodidade de conseguir fazer <b>tudo na sua casa sem precisar ir para uma agência</b>, muito bom né? Então, esses são os bancos digitais, uma tendência cada vez mais forte pelo seu custo benefício, tanto para as os clientes como para as instituições. Esse tipo de banco tem seu processo todo por meios online e por não ter uma agência física, acaba tendo menos custos para as instituições, por conta disto muitas delas optam por <b>não cobrar certas taxas</b> para assim atrair mais clientes.</p>
