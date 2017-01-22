@@ -25,10 +25,6 @@ layout: default
    		]
     }
   );
-
-lock.show({
-  callbackURL: 'https://startops7.github.io/neon-blog/'
-});
 </script>
 <section class="grad">
     <div class="container">
@@ -50,7 +46,7 @@ lock.show({
         <div class="row">
         {% for post in site.posts limit:3 %}
             <div class="col-sm-6 col-md-4">
-            <a href="{{site.url}}{{ post.url }}">
+            <a onclick="lock.show({callbackURL: '{{site.url}}{{ post.url }}'});">
                 <div class="thumbnail">
                 {% assign image = post.images[0] %}
                 {% include image.html image=image %}
