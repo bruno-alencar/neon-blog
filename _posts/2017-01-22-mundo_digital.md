@@ -2,7 +2,15 @@
 layout: post
 author: Katarina
 title: Mundo digital sem taxa
+
+images:
+
+  - url: ../assets/images/mundo-sem-taxa.jpg
+    alt: Moça segurando um café com telefone na mão
+    title: Mundo sem taxas
 ---
+
+![Image alt]({{ site.baseurl }}/assets/images/mundo-sem-taxa.jpg "image title")
 
 Atualmente estamos em um momento onde **não podemos perder nenhum centavo** do nosso querido dinheiro, então que tal uma conta que te ajuda **não te cobrando certas taxas**? 
 
