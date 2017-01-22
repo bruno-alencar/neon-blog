@@ -10,6 +10,8 @@ images:
     title: Bancos digitais
 ---
 
+![Bancos digitais]({{ site.baseurl }}/assets/images/bancos-digitais.jpg)
+
 <p>Pense na comodidade de conseguir fazer <b>tudo na sua casa sem precisar ir para uma agência</b>, muito bom né? Então, esses são os bancos digitais, uma tendência cada vez mais forte pelo seu custo benefício, tanto para as os clientes como para as instituições. Esse tipo de banco tem seu processo todo por meios online e por não ter uma agência física, acaba tendo menos custos para as instituições, por conta disto muitas delas optam por <b>não cobrar certas taxas</b> para assim atrair mais clientes.</p>
 
 <p>No dia 25 de abril de 2016 o Conselho Monetário Nacional (CMN) <b>liberou a abertura e o encerramento de contas bancárias via internet</b> e pelo celular. O órgão determinou que as instituições garantam por meio da tecnologia a segurança em todo o processo e prevenção de fraudes, usando por meio de, uso da biometria facial, certificado digital, leitura de impressão digital, etc. É muito bom você poder abrir uma conta em um banco sem nem precisar sair de casa, enfrentar toda aquela fila e burocracia que existem nas agências dos bancos.</p>

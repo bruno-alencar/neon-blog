@@ -10,7 +10,7 @@ images:
     title: Mundo sem taxas
 ---
 
-![Image alt]({{ site.baseurl }}/assets/images/mundo-sem-taxa.jpg "image title")
+![Mundo sem taxa]({{ site.baseurl }}/assets/images/mundo-sem-taxa.jpg)
 
 Atualmente estamos em um momento onde **não podemos perder nenhum centavo** do nosso querido dinheiro, então que tal uma conta que te ajuda **não te cobrando certas taxas**? 
 

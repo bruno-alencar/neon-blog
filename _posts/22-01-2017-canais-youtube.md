@@ -10,6 +10,7 @@ images:
     title: Canais de youtube
 ---
 
+![Canais de youtube]({{ site.baseurl }}/assets/images/canal-youtube-financas.jpg)
 
 <p>Que tal aprender se divertindo? Encontramos alguns canais para você aprender finanças de forma mais divertida e simples, afinal otimizar seu dinheiro não deve ser algo chato.</p>
 
