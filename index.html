@@ -3,8 +3,19 @@ layout: default
 ---
 <script src="https://cdn.auth0.com/js/lock/10.8.0/lock.min.js"></script>
 <script>
-  var lock = new Auth0Lock("uapYHKi1KeyZhxuWJRV7g0OfXbjBoFhS","startops7.auth0.com");
-  lock.show({
+  	var lock = new Auth0Lock("uapYHKi1KeyZhxuWJRV7g0OfXbjBoFhS","startops7.auth0.com");
+	lock.on("authenticated", function(authResult) {
+	  lock.getProfile(authResult.idToken, function(error, profile) {
+	    if (error) {
+	      // Handle error
+	      return;
+	    }
+	    localStorage.setItem('id_token', authResult.idToken);
+	    // Display user information
+	    show_profile_info(profile);
+	  });
+	});
+  	lock.show({
       	allowedConnections: ["google-oauth2","facebook"],
 		theme: {"logo":"http://i.imgur.com/XfS6MuS.png","primaryColor":"#2196f3"},
 		languageDictionary: {"title":"Fique azul"},
@@ -15,6 +26,10 @@ layout: default
         scope: 'openid email'
       	}
     });
+    var logout = function() {
+	  localStorage.removeItem('id_token');
+	  window.location.href = "/";
+	};
 </script>
 <section class="grad">
     <div class="container">
