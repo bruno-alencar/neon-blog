@@ -210,3 +210,12 @@ pre {
         }
     }
 }
+
+.logo-icon {
+    > svg {
+        display: inline-block;
+        width: 145px;
+        vertical-align: middle;
+        float: right;
+    }
+}
