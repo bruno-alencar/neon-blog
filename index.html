@@ -1,6 +1,33 @@
 --- 
 layout: default 
 ---
+<script src="https://cdn.auth0.com/js/lock/10.8.0/lock.min.js"></script>
+<script>
+  var lock = new Auth0Lock(
+    "uapYHKi1KeyZhxuWJRV7g0OfXbjBoFhS",
+    "startops7.auth0.com",
+    {
+      	allowedConnections: ["Username-Password-Authentication","google-oauth2","facebook"],
+		socialButtonStyle: "small",
+		theme: {"logo":"http://i.imgur.com/XfS6MuS.png","primaryColor":"#2196f3"},
+		languageDictionary: {"title":"Fique azul"},
+		language: "pt-br",
+		additionalSignUpFields:[
+		{  
+        	name:"nome",
+        	placeholder:"seu nome",
+
+      	},
+      	{  
+        	name:"sobrenome",
+        	placeholder:"seu sobrenome"
+      	}
+   		]
+    }
+  );
+
+  lock.show();
+</script>
 <section class="grad">
     <div class="container">
         <div class="logo-centered">
