@@ -8,6 +8,9 @@ images:
   - url: /assets/images/mundo-sem-taxa.jpg
     alt: Moça segurando um café com telefone na mão
     title: Mundo sem taxas
+  - url: /assets/images/thumb-mundo.jpg
+    alt: Smartphone gigante com várias pessoas em volta
+    title: Bancos digitais
 ---
 
 ![Mundo sem taxa]({{ site.baseurl }}/assets/images/mundo-sem-taxa.jpg)

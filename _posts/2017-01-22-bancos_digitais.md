@@ -8,6 +8,10 @@ images:
   - url: /assets/images/bancos-digitais.jpg
     alt: Smartphone gigante com várias pessoas em volta
     title: Bancos digitais
+    
+  - url: /assets/images/thumb-banco.jpg
+    alt: Smartphone gigante com várias pessoas em volta
+    title: Bancos digitais
 ---
 
 ![Bancos digitais]({{ site.baseurl }}/assets/images/bancos-digitais.jpg)
