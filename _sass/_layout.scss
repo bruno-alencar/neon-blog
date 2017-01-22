@@ -24,7 +24,7 @@
 }
 
 .grad {
-    background: $primary-blue-color url(../assets/images/bg_header.jpg) no-repeat center center;
+    background: $primary-blue-color url(../assets/images/people.jpg) no-repeat center center;
     @include media-query($on-palm) {
         background: $primary-blue-color;
         background: -webkit-linear-gradient(left top, $primary-blue-color, $accent-color);
