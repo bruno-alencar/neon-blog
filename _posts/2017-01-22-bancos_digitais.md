@@ -20,8 +20,7 @@ Primeiro a liberar abertura de conta pelo aplicativo <br /><br />
 <b>Neon</b><br />
 Novo banco 100% digital com atendimento rápido e personalizado</p>
 
-<table border = 1>
-
+<table>
 <tr><td><b>INTERMEDIUM</b></td> <td><b>ORIGINAL</b></td> <td><b>NEON</b></td></tr>
 <tr><td>Abertura de conta pelo site ou pelo APP</td> <td>Abertura de conta pelo site ou APP</td> <td>Apenas pelo aplicativo</td></tr> 
 
@@ -44,7 +43,7 @@ Novo banco 100% digital com atendimento rápido e personalizado</p>
 <tr><td>Vários investimentos disponíveis</td> <td>Vários investimentos disponíveis</td>
 <td>CDB (Certificado de Depósito Bancário)</td></tr>
 
-<table>
+</table>
 
 <br />
 Agora é escolher qual banco se encaixa mais com você.
