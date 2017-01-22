@@ -24,14 +24,14 @@ O segredo é o mágico mundo das **contas digitais**, normalmente as taxas são 
 
 No Brasil há dois grandes bancos que oferecem esse serviço, que é o *Bradesco* e o *Itaú*, o *Banco do Brasil* também oferecia, mas agora está sendo reformulada pelo banco.
 
-Mas e aí? Como posso ter essa conta?
-=====================================
+### Mas e aí? Como posso ter essa conta? ###
+
 
 
 Preste muita atenção, pois como é uma conta gratuita, **os bancos tentam dificultar a sua migração**, então vá até o site do banco que você irá solicitar e imprima a informação que é oferecido esse pacote digital e vá conversar com o seu gerente para essa transição.
 
-Mas realmente vale a pena?
-==========================
+### Mas realmente vale a pena? ###
+
 
 Se você usa muito a Internet no seu dia a dia da sua conta, sim, vale muito. Mas se caso você utilize mais meios tradicionais, como talões de cheque e saques nos guichês dentro das agências, para você não compensa.
 
