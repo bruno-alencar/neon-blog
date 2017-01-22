@@ -3,28 +3,18 @@ layout: default
 ---
 <script src="https://cdn.auth0.com/js/lock/10.8.0/lock.min.js"></script>
 <script>
-  var lock = new Auth0Lock(
-    "uapYHKi1KeyZhxuWJRV7g0OfXbjBoFhS",
-    "startops7.auth0.com",
-    {
-      	allowedConnections: ["Username-Password-Authentication","google-oauth2","facebook"],
-		socialButtonStyle: "small",
+  var lock = new Auth0Lock("uapYHKi1KeyZhxuWJRV7g0OfXbjBoFhS","startops7.auth0.com");
+  lock.show({
+      	allowedConnections: ["google-oauth2","facebook"],
 		theme: {"logo":"http://i.imgur.com/XfS6MuS.png","primaryColor":"#2196f3"},
 		languageDictionary: {"title":"Fique azul"},
 		language: "pt-br",
-		additionalSignUpFields:[
-		{  
-        	name:"nome",
-        	placeholder:"seu nome",
-
-      	},
-      	{  
-        	name:"sobrenome",
-        	placeholder:"seu sobrenome"
+		responseType: 'code',
+		callbackURL: 'http://fiquezul.me/blog/',
+		authParams: {
+        scope: 'openid email'
       	}
-   		]
-    }
-  );
+    });
 </script>
 <section class="grad">
     <div class="container">
@@ -46,7 +36,7 @@ layout: default
         <div class="row">
         {% for post in site.posts limit:3 %}
             <div class="col-sm-6 col-md-4">
-            <a onclick="lock.show({callbackURL: '{{site.url}}{{ post.url }}'});">
+            <a href="{{site.url}}{{ post.url }}">
                 <div class="thumbnail">
                 {% assign image = post.images[0] %}
                 {% include image.html image=image %}
