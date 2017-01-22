@@ -10,7 +10,7 @@ author: Karina & Raiane
 
 <p>E quais são os principais bancos digitais no Brasil? É isso que iremos ver agora. <br /><br />
 
-### Intermedium ###
+<b> Intermedium </b>
 
 Foi o primeiro a liberar a opção de abertura de conta-corrente por meio de seu site <br /><br />
 
