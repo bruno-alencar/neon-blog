@@ -1,33 +1,27 @@
 --- 
 layout: default 
 ---
+{% include header.html %}
+
 <div class="container all-posts">
-	<section class="col-md-3">
-	    <nav >
-	        <ul class="nav nav-pills nav-stacked">
-	            <li><a href="{{ site.url }}">Home</a></li>
-	            <li><a href="{{ site.baseurl }}">Blog</a></li>
-	        </ul>
-	    </nav>
-	</section>
-	<section class="col-md-9 post-list">
+	<header class="page-header ">
+	<h1 class="text-center">Todos os posts</h1>	
+	</header>
+	
+	<section class="post-list">
 		{% for post in site.posts %}
-			<h3><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></h3>
-			{% if post.excerpt %}
-                {{ post.excerpt | markdownify }}
-                {% unless post.nomore or post.quote %}
-                    <p><a href="{{site.url}}{{ post.url }}">
-                        {% if post.language == "en" %}
-                        <strong>Continue reading&#8230;</strong>
-                        {% else %}
-                        <strong>Continue lendo&#8230;</strong>
-                        {% endif %}</a>
-                    </p>
-                {% endunless %}
-            {% else %}
-                {{ post.content }}
-            {% endif %}
-		{% endfor %}
+            <div class="col-sm-6 col-md-4">
+            <a href="{{site.url}}{{ post.url }}">
+                <div class="thumbnail">
+                {% assign image = post.images[0] %}
+                {% include image.html image=image %}
+                        <div class="caption">
+                            <h3 class="text-center">{{ post.title }}</h3>
+                        </div>
+                    </div>
+                </div>  
+            </a>
+        {% endfor %}    
 	</section>	
 </div>
 

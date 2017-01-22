@@ -11,3 +11,5 @@ url: "http://startops7.github.io/neon-blog" # the base hostname & protocol for y
 # Build settings
 markdown: kramdown
 permalink: /blog/:title/
+
+facebook_username: FiqueAzul
