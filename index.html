@@ -8,6 +8,9 @@ layout: default
       localStorage.setItem('id_token', authResult.idToken);
     });
     var init = function() {
+      var options = {
+        closable: false
+      };
       var id_token = localStorage.getItem('id_token');
       if (!id_token) {
           lock.show({
