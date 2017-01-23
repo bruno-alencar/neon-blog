@@ -17,4 +17,4 @@ Muitas vezes somos pegos sonhando e **fazendo planos para o futuro**, mas estes 
 
 Uma ótima dica para conseguir alcançar nossos objetivos e metas é **colocar tudo isso no papel, traçar as estratégias, táticas e prazos** para estes objetivos acontecerem, assim conseguimos acompanhar nossa evolução dia a dia, também é o que vai te motivar ainda mais a superar os desafios e obstáculos para alcançá-los.
 
-<a href = ><b>Clique aqui e olhe o que temos para você!</b></a>
+[Clique aqui e olhe o que temos para você!]()
