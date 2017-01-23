@@ -4,6 +4,7 @@
 
 .navbar {
     height: 65px;
+    border-radius: 0 !important;
 }
 
 .navbar-default {
@@ -274,6 +275,10 @@
         margin-bottom: 65px;
         border-radius: 35px;
     }
+}
+
+.share {
+    padding: 25px 0px;
 }
 
 .second-titles {

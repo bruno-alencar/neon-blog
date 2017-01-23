@@ -11,11 +11,17 @@ layout: default
 
 	  <header class="post-header">
 	    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+			fiquezul.me{{page.url}}
 	    <!-- <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p> -->
 	  </header>
 
 	  <div class="post-content" itemprop="articleBody">
 	    {{ content }}
+	  </div>
+
+	  <div class="share">
+	  	<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=www.fiquezul.me" data-size="large">Tweet</a>
+	  	<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Ffiquezul.me{{page.url}}&layout=button&size=large&mobile_iframe=true&appId=276066506146137&width=117&height=28" width="117" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 	  </div>
 
 	</article>	
