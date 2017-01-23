@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Raiane
-title: Aprenda finanças "divertidamente"
+title: 4 canais do youtube que te ensinam finanças de forma divertida
 
 images:
 
