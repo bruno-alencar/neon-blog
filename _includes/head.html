@@ -46,7 +46,7 @@
 
   </script>
 
-<!--   <script src="https://cdn.auth0.com/js/lock/10.8.0/lock.min.js"></script>
+  <script src="https://cdn.auth0.com/js/lock/10.8.0/lock.min.js"></script>
   <script>
     var lock = new Auth0Lock("uapYHKi1KeyZhxuWJRV7g0OfXbjBoFhS","startops7.auth0.com");
     lock.on("authenticated", function(authResult) {
@@ -56,12 +56,12 @@
       var id_token = localStorage.getItem('id_token');
       if (!id_token) {
           lock.show({
+          closable:false,
           allowedConnections: ["google-oauth2","facebook"],
           theme: {"logo":"http://i.imgur.com/XfS6MuS.png","primaryColor":"#2196f3"},
           languageDictionary: {"title":"Fique azul"},
           language: "pt-br",
           auth: {
-          redirectUrl: 'http://fiquezul.me/',
           responseType: 'token',
           params: {
               scope: 'openid email'
@@ -71,5 +71,5 @@
       }
     };
   init();
-  </script> -->
+  </script>
 </head>
