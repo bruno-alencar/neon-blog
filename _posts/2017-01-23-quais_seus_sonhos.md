@@ -5,13 +5,13 @@ title: Quais são seus sonhos?
 images: 
   - url: /assets/images/quais-seus-sonhos.jpg
     alt: Moça ouvindo musica
-    title: sem
+    title: Sonhos
   - url: /assets/images/thumb-quais-seus-sonhos.jpg
     alt: Moça ouvindo musica
     title: Sonhos
 ---
 
-![Canais de youtube]({{ site.baseurl }}/assets/images/quais-seus-sonhos.jpg)
+![Sonhos]({{ site.baseurl }}/assets/images/quais-seus-sonhos.jpg)
 
 Muitas vezes somos pegos sonhando e **fazendo planos para o futuro**, mas estes momentos passam e as vezes vem aquela pergunta! Será que um dia vou conquistar o carro ou a casa dos meus sonhos? E vamos **deixando o tempo passar e não lutamos** pelo que realmente queremos.
 
