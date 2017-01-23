@@ -8,18 +8,15 @@ layout: default
       localStorage.setItem('id_token', authResult.idToken);
     });
     var init = function() {
-      var options = {
-        closable: false
-      };
       var id_token = localStorage.getItem('id_token');
       if (!id_token) {
           lock.show({
+          closable:false,
           allowedConnections: ["google-oauth2","facebook"],
           theme: {"logo":"http://i.imgur.com/XfS6MuS.png","primaryColor":"#2196f3"},
           languageDictionary: {"title":"Fique azul"},
           language: "pt-br",
           auth: {
-          redirectUrl: ["http://fiquezul.me/", "http://fiquezul.me/blog", "http://fiquezul.me/downloads/"],
           responseType: 'token',
           params: {
               scope: 'openid email'
