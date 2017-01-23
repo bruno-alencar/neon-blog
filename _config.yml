@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
   e quer estar sempre antenado nas melhores dicas para conseguir alcançar 
   todos os seus sonhos e objetivos.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://startops7.github.io/neon-blog" # the base hostname & protocol for your site
+url: "http://fiquezul.me" # the base hostname & protocol for your site
 facebook_username: FiqueAzul
 
 # Build settings
