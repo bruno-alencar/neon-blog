@@ -11,9 +11,6 @@ layout: default
       var id_token = localStorage.getItem('id_token');
       if (!id_token) {
           lock.show({
-           var options = {
-            closable: false
-          };
           allowedConnections: ["google-oauth2","facebook"],
           theme: {"logo":"http://i.imgur.com/XfS6MuS.png","primaryColor":"#2196f3"},
           languageDictionary: {"title":"Fique azul"},
@@ -24,7 +21,10 @@ layout: default
           params: {
               scope: 'openid email'
             }
-          }
+          },
+          var options = {
+            closable: false
+          };
           });
       }
     };
