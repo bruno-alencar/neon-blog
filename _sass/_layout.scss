@@ -72,9 +72,45 @@
 
 #arrow {
     font-size: 1.7em;
-    padding: 15px;
+    padding: 25px;
     @include media-query($on-palm) {
         font-size: 1.2em;
+    }
+}
+
+.down-arrow{
+    position: relative;
+    margin-left: -1px;
+    margin-top: 8px;
+    z-index: 2;
+
+    svg {
+        position: absolute;
+        -webkit-animation: movearrow 1.5s infinite;
+        -moz-animation: movearrow 1.5s infinite;
+        -o-animation: movearrow 1.5s infinite;    
+    }
+    
+}
+
+
+@-webkit-keyframes movearrow {
+    0%,
+    100% {
+        margin-top: 8px
+    }
+    50% {
+        margin-top: 15px
+    }
+}
+
+@keyframes movearrow {
+    0%,
+    100% {
+        margin-top: 8px
+    }
+    50% {
+        margin-top: 15px
     }
 }
 
@@ -290,4 +326,12 @@
 
 .light-text { 
     color: $white-color !important;
+}
+
+.links {
+    color: $primary-blue-color !important;
+}
+
+article {
+    padding-bottom: 35px;
 }
