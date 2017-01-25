@@ -2,7 +2,17 @@
 layout: post
 title: 5 Dicas para usar o cartão de crédito como aliado e não como vilão!
 author: Katarina
+
+images: 
+  - url: /assets/images/5-dicas-para-cartao.jpg
+    alt: Moça ouvindo musica
+    title: Dinheiro
+  - url: /assets/images/thumb-5-dicas-para-cartao.jpg
+    alt: Moça ouvindo musica
+    title: Dinheiro
 ---
+
+![Dicas Cartão]({{ site.baseurl }}/assets/images/5-dicas-para-cartao.jpg)
 
 ### 1 - Pesquise várias opções antes de efetuar a compra ###
 

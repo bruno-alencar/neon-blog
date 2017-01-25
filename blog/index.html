@@ -12,11 +12,7 @@ layout: default
 		<!-- {{ site.posts.size }} -->
 		{% assign counter = 0 %}
 		{% for post in site.posts %}
-			{% assign counter = counter | plus: 1 %}
-			{% if counter%3 %}
-			<div class="row">
-			{% endif %}
-			{{ post.size }}
+			{% cycle 'add row' : '<div class="row">', nil, nil %}
 	            <div class="col-sm-6 col-md-4">
 	            	<a href="{{site.url}}{{ post.url }}">
 		                <div class="thumbnail">
@@ -28,10 +24,9 @@ layout: default
 		              	</div>
 	            	</a>  
 	            </div>
-	        {% if counter%3 == 0 %}
-			</div>
-			{% endif %}
+	        {% cycle 'end row' : nil, nil, '</div>' %}
         {% endfor %} 
+        {% cycle 'end row' : nil, '</div>', '</div>' %}
 	</section>	
 </div>
 
