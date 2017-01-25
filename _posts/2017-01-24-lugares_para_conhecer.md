@@ -4,10 +4,10 @@ author: Katarina
 title: Lugares que você precisa conhecer em são paulo sem gastar muito dinheiro
 
 images: 
-  - url: /assets/images/CONTEÚDO-LUGARES-QUE-VOCÊ-PRECISA-CONHECER-EM-SP-SEM-GASTAR-MUITO-DINHEIRO.jpg
+  - url: /assets/images/lugares-sem-muito-dinheiro.jpg
     alt: Paisagem de São Paulo
     title: Dinheiro
-  - url: /assets/images/THUMBNAIL-LUGARES-QUE-VOCÊ-PRECISA-CONHECER-EM-SP-SEM-GASTAR-MUITO-DINHEIRO.jpg
+  - url: /assets/images/thumb-lugares-sem-muito-dinheiro.jpg
     alt: Paisagem de São Paulo
     title: Dinheiro
 ---
