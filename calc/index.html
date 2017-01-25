@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fique Azul!</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+	<meta charset="utf-8">
+	<meta http-equiv="X_UA_Compatible" content="IE=edge">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="img/favicon.ico" />
+
+	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+ -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.maskMoney.min.js"></script>
+
+	<script type="text/javascript">
+		
+
+		// $(function(){
+ 	// 		 $("#valor").maskMoney({prefix:'R$ ', thousands:'.'});
+		// });
+
+		function getType(){
+			var tipoCalc = $("input[name='tipoCalc']:checked").val();
+
+			switch(tipoCalc){
+				case "igualmente":
+					calcIgualgumente();
+					break;
+				case "progressivo":
+					calcProgressivo();
+					break;
+				case "randomico":
+					calcRandomico();
+					break;
+			}
+		}
+
+		function limparMascara(valor){
+
+			valor = valor.substring(0,valor.length-3)
+			valor = valor.replaceAll(".","");
+			// valor = valor.replaceAll("R$","");
+			// valor = valor.replaceAll(",","");
+			return valor;
+		}
+
+
+		function calcIgualgumente(){
+			var valor = $("#valor").val();
+
+			// valor = limparMascara(valor);
+
+			console.log("mascara"+valor);
+
+			var semanas = $("#semanas").val();
+
+			var resultado = valor / semanas;
+
+			for( var i = 1; i <= semanas; i++){
+				$("<p/>").text("Semana "+i+": R$"+ resultado).appendTo(".resultado");
+			}
+
+			$("#valorEconomizado").html("R$:"+valor);
+		}
+
+		function calcProgressivo(){
+
+			var valor = $("#valor").val();
+			var semanas = $("#semanas").val();
+
+			var resultado = 0;
+			var contador = 1;
+
+			do{
+				$("<p/>").text("Semana "+contador+": R$"+ contador).appendTo(".resultado");
+				resultado = resultado + contador;
+				contador++;
+			}while(resultado < valor);
+
+			$("#valorEconomizado").html("R$:"+resultado);
+		}
+
+		function calcRandomico(){
+
+			var valor = $("#valor").val();
+
+			var resultado = 0;
+			var contador = 1;
+
+			do{
+				var calc = Math.random() * 1000;
+
+				$("<p/>").text("Semana "+contador+": R$"+ calc).appendTo(".resultado");
+				resultado = resultado + calc;
+				contador++;
+
+			}while(resultado < valor);
+			$("#valorEconomizado").html("R$:"+resultado);
+		}
+
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<article class="row">
+		<section class="conteudo" class="col-lg-7">
+			<form action="javascript:void(getType())">
+
+				 <label class="radio-inline"><input type="radio" class="tipoCalculo" name="tipoCalc" value="igualmente"> Igualmente</label>
+				<label class="radio-inline"><input type="radio" class="tipoCalculo" name="tipoCalc" value="progressivo"> Progressivo</label>
+				<label class="radio-inline"><input type="radio" class="tipoCalculo" name="tipoCalc" value="randomico"> Randômico</label>	
+
+				<div class="form-group">
+						<label>Valor Pretendido:</label>
+						<input id="valor" class="form-control" name="valor" value="" placeholder="Valor" required>
+				</div>
+				<div class="form-group">
+						<label>Quantidade de Semanas</label>
+						<input id="semanas" class="form-control" name="semanas" value="" placeholder="Semanas" required>
+				</div>
+				<button type="submit" class="btn btn-primary btn-send">Enviar</button> 
+
+			</form>
+
+			<div class="resultado">
+				<h2>Resultado</h2>
+				<h3>Valor total economizado: <bold id="valorEconomizado">0</bold></h3>
+			</div>
+		</section>
+
+	</article>
+
+	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90724781-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
