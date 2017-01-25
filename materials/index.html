@@ -10,7 +10,15 @@
 	<meta name="viewport" content="width-device-width, initial-scale=1">
 
 	<link rel="shortcut icon" href="img/favicon.ico" />
-
+	
+	<meta property="og:title" content="Materiais financeiros Fique Azul" />
+    <meta property="og:site_name" content="Fique Azul" />
+    <meta property="og:url" content="{{ site.url }}{% if page.url != '/index.html' %}{{ page.url }}{% endif %}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="og:image" content="https://dl.dropboxusercontent.com/u/104095732/16114691_367188236993750_7649428387150050632_n-2.png">
+    <meta name="og:image:type" content="image/jpeg">
+    <meta name="og:image:width" content="640">
+    <meta name="og:image:height" content="640">
 	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
  -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
