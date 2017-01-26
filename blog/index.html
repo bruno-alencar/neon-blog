@@ -9,8 +9,6 @@ layout: default
 	</header>
 	
 	<section class="post-list">
-		<!-- {{ site.posts.size }} -->
-		{% assign counter = 0 %}
 		{% for post in site.posts %}
 			{% cycle 'add row' : '<div class="row">', nil, nil %}
 	            <div class="col-sm-6 col-md-4">
@@ -18,9 +16,9 @@ layout: default
 		                <div class="thumbnail">
 		                {% assign image = post.images[1] %}
 		                {% include image.html image=image %}
-		                        <div class="caption">
-		                            <h3 class="text-center">{{ post.title }}</h3>
-		                        </div>
+	                        <div class="caption">
+	                            <h3 class="text-center">{{ post.title }}</h3>
+	                        </div>
 		              	</div>
 	            	</a>  
 	            </div>

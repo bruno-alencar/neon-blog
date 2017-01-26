@@ -12,7 +12,7 @@ images:
     title: Dinheiro
 ---
 
-Não leve um susto um susto no fim do mês! Iremos te ajudar mostrando 10 lugares legais para sair sem gastar tanto dinheiro em são paulo.
+Não leve um susto no fim do mês! Iremos te ajudar mostrando 10 lugares legais para sair sem gastar tanto dinheiro em são paulo.
 
  1 - **Mirante 9 de Julho**
  

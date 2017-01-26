@@ -11,7 +11,7 @@ images:
     title: Dinheiro
 ---
 
-![Dinheiro]({{ site.baseurl }}/assets/images/quais-seus-sonhos.jpg)
+![Dinheiro]({{ site.baseurl }}/assets/images/onde-vai-dinheiro.jpg)
 
 Acredito que alguma vez na sua vida, você já chegou no final do mês e se fez aquela simples pergunta! **Para onde foi meu dinheiro este mês?**
 
