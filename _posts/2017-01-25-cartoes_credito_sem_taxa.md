@@ -3,15 +3,15 @@ layout: post
 title: 3 cartões de crédito sem a temida taxa anual
 
 images: 
-  - url: /assets/images/cartoes-sem-taxa.jpg
+  - url: /assets/images/cartoes-sem-taxas.jpg
     alt: Moça ouvindo musica
     title: Dinheiro
-  - url: /assets/images/thumb-cartoes-sem-taxa.jpg
+  - url: /assets/images/thumb-cartoes-sem-taxas.jpg
     alt: Moça ouvindo musica
     title: Dinheiro
 ---
 
-![Dinheiro]({{ site.baseurl }}/assets/images/cartoes-sem-taxa.jpg)
+![Dinheiro]({{ site.baseurl }}/assets/images/cartoes-sem-taxas.jpg)
 
 Está pensando em ter um cartão de crédito ou pegar outro para não pagar aquela temida taxa de anuidade? Confere aqui a lista de cartões de crédito sem taxa de anuidade que preparamos para você.
 
