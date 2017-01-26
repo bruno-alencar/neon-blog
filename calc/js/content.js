@@ -58,12 +58,12 @@
 				var cols =  "";
 
 				cols += "<td>"+i+"</td>"
-				cols += "<td>"+resultado+"</td>"
-				cols += "<td>"+acumulado+"</td>"
+				cols += "<td>"+resultado.toFixed(2)+"</td>"
+				cols += "<td>"+acumulado.toFixed(2)+"</td>"
 
 				newRow.append(cols);
 				$("#respostas").append(newRow);
-				$("#valorEconomizado").html("R$:"+acumulado);
+				$("#valorEconomizado").html("R$:"+acumulado.toFixed(2));
 
 				
 			}
@@ -86,11 +86,11 @@
 
 				cols += "<td>"+contador+"</td>"
 				cols += "<td>"+contador+"</td>"
-				cols += "<td>"+resultado+"</td>"
+				cols += "<td>"+resultado.toFixed(2)+"</td>"
 
 				newRow.append(cols);
 				$("#respostas").append(newRow);
-				$("#valorEconomizado").html("R$:"+resultado);
+				$("#valorEconomizado").html("R$:"+resultado.toFixed(2));
 
 				contador++;
 	
@@ -114,15 +114,15 @@
 				var cols =  "";
 
 				cols += "<td>"+contador+"</td>"
-				cols += "<td>"+calc+"</td>"
-				cols += "<td>"+resultado+"</td>"
+				cols += "<td>"+calc.toFixed(2)+"</td>"
+				cols += "<td>"+resultado.toFixed(2)+"</td>"
 
 
 				// $("<p/>").text("Semana "+contador+": R$"+ calc).appendTo(".resultado");
 				
 				newRow.append(cols);
 				$("#respostas").append(newRow);
-				$("#valorEconomizado").html("R$:"+resultado);
+				$("#valorEconomizado").html("R$:"+resultado.toFixed(2));
 
 				contador++;
 
