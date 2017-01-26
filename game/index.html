@@ -1,0 +1,278 @@
+<html ng-app="fiqueAzul">
+
+<head>
+    <meta property="og:url" content="http://www.coachesneedsocial.com/coacheswisdomtelesummit/" />
+    <title>Quando vou ficar rico?</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <style>
+        .pad {
+            width: 100vw;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #eef8ff;
+        }
+
+        .jumbotron {
+            text-transform: uppercase;
+            background-color: #2196f3;
+            color: white;
+        }
+
+    </style>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<!-- <script type="text/javascript">
+		
+		$.get("https://ipinfo.io", function(response) {
+			console.log(response);
+    		$("#ip").val(response.ip);
+    		$("#data").val(new Date().toLocaleString());
+
+		}, "jsonp");
+
+		function salvar(){
+			var nome = $("#nome").val();
+			var email = $("#email").val();
+			var data = $("#data").val();
+			var ip = $("#ip").val();
+
+			$.post("https://sheetsu.com/apis/v1.0/3369238049e8",{
+				Nome: nome,
+				Email: email,
+				Data: data,
+				Ip: ip
+			});
+
+			alert("Cadastro enviado com sucesso!");
+
+			limpar();
+		}
+
+		function limpar(){
+			$("#nome").val("");
+			$("#email").val("");
+			$("#data").val("");
+			$("#ip").val("");
+			location.reload();
+		}
+
+
+	</script> -->
+    <script src="angular.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="controller.js"></script>
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));
+
+    </script>
+</head>
+
+<body class="pad" ng-controller="PerguntasController">
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=238244913285421";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <form name="myForm" ng-submit="submeter()" method="post">
+        <div class="jumbotron">
+            <h2>Descubra como será sua vida financeira</h2>
+        </div>
+    <div class="row">
+    	<iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Ffiquezul.me&layout=button&size=large&mobile_iframe=true&appId=1807205746201961&width=117&height=28" width="117" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    	<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=www.fiquezul.me%20Entrem" data-size="large">Tweet</a>
+    </div>
+        <h3>1- Com quantos anos você começou a trabalhar?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.primeira" value="azul" ng-required="!dados.primeira"> Nunca trabalhei
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.primeira" value="vermelho" ng-required="!dados.primeira"> -17 anos
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.primeira" value="cinza" ng-required="!dados.primeira"> 18 - 22 anos
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.primeira" value="amarelo" ng-required="!dados.primeira"> +23 anos
+            </label>
+            <br/>
+        </div>
+        <img src="img/1.jpg">
+        <h3>2- Qual o tamanho da última empresa que você trabalhou?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.segunda" value="azul" ng-required="!dados.segunda"> Pequena
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.segunda" value="vermelho" ng-required="!dados.segunda"> Média
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.segunda" value="cinza" ng-required="!dados.segunda"> Grande
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.segunda" value="amarelo" ng-required="!dados.segunda"> Multinacional
+            </label>
+            <br/>
+        </div>
+        <img src="img/2.jpg">
+        <h3>3- Quantas vezes você já foi promovido?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.terceira" value="azul" ng-required="!dados.terceira"> 0
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.terceira" value="vermelho" ng-required="!dados.terceira"> 1
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.terceira" value="cinza" ng-required="!dados.terceira"> 2
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.terceira" value="amarelo" ng-required="!dados.terceira"> +3
+            </label>
+            <br/>
+        </div>
+        <img src="img/3.jpg">
+        <h3>4- Você se considera consumista?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.quarta" ng-value="true"> sim
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.quarta" ng-value="false"> não
+            </label>
+            <br/>
+        </div>
+        <img src="img/4.gif">
+        <h3>5- Você tem cartão de crédito?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.quinta" ng-value="true"> sim
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.quinta" ng-value="false"> não
+            </label>
+            <br/>
+        </div>
+        <img src="img/5.jpg">
+        <h3>6- Seu cartão de crédito tem plano de milhagem?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.sexta" ng-value="true"> sim
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.sexta" ng-value="false"> não
+            </label>
+            <br/>
+        </div>
+        <img src="img/6.jpg">
+        <h3>7- Sua conta bancária está acima de R$100?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.setima" ng-value="true"> sim
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.setima" ng-value="false"> não
+            </label>
+            <br/>
+        </div>
+        <img src="img/7.gif">
+        <h3>8- Você tem ajuda financeira dos seus pais?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.oitava" ng-value="true"> sim
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.oitava" ng-value="false"> não
+            </label>
+            <br/>
+        </div>
+        <img src="img/8.jpg">
+        <h3>9- Qual seu sonho?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.nona" ng-value="true"> Abrir o próprio negócio
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.nona" ng-value="false"> Crescer em uma empresa
+            </label>
+            <br/>
+        </div>
+        <img src="img/9.gif">
+        <h3>10- Joga na loteria frequentemente?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.decima" ng-value="true"> sim
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.decima" ng-value="false"> não
+            </label>
+            <br/>
+        </div>
+        <img src="img/10.jpg">
+        <h3>11- Gosta de tecnologia? Está por dentro das novidades tecnológicas?</h3>
+        <div class="row radio">
+            <label>
+                <input type="radio" ng-model="dados.decimaPrimeira" ng-value="true"> sim
+            </label>
+            <label>
+                <input type="radio" ng-model="dados.decimaPrimeira" ng-value="false"> não
+            </label>
+            <br/>
+        </div>
+        <img src="img/11.gif">
+        <br>
+        <label style="margin-top: 30px;">
+            Nome:
+            <input type="text" ng-model="nome" id="nome" name="nome" class="form-control" required>
+        </label>
+        <label style="margin-top: 30px;">
+            E-mail:
+            <input type="email" ng-model="email" id="email" name="email" class="form-control" required>
+        </label>
+					<div class="form-group" style="display:none">
+						<label>Data</label>
+						<input id="data" class="form-control" name="Data" value="">
+					</div>
+					<div class="form-group" style="display:none">
+						<label>Ip</label>
+						<input id="ip" class="form-control" name="Ip" value="">
+					</div>
+        <button href="fiquezul.me/game/respostas/{{teste}}" type="submit" class="btn btn-primary btn-lg" style="margin: 20px;">Vou ficar rico?</button>
+    </form>
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-90724781-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+
+</html>
