@@ -261,8 +261,11 @@
 						<label>Ip</label>
 						<input id="ip" class="form-control" name="Ip" value="">
 					</div>
-        <button href="fiquezul.me/game/respostas/{{teste}}" type="submit" class="btn btn-primary btn-lg" style="margin: 20px;" ng-hide="teste">Calcular</button>
-        <a href="fiquezul.me/game/respostas/{{teste}}" ng-show="teste">Ver resultado</a>
+        <button type="submit" class="btn btn-primary btn-lg" style="margin: 20px;">Calcular</button>
+        <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+        	<a href="fiquezul.me/game/respostas/{{teste}}" class="btn btn-primary btn-lg" ng-show="teste">Ver resultado</a>
+        </div>
+        
     </form>
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -48,7 +48,7 @@ app.controller('PerguntasController', function ($scope, $rootScope) {
 				Ip: ip
 			});
 
-			alert("Cadastro enviado com sucesso!");
+			alert("Cálculo feito! Aperte ver resultado.");
 
 		}
 
