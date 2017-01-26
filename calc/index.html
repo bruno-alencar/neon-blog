@@ -15,95 +15,7 @@
  -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
 
-	<script type="text/javascript" src="js/jquery.maskMoney.min.js"></script>
-
-	<script type="text/javascript">
-		
-
-		// $(function(){
- 	// 		 $("#valor").maskMoney({prefix:'R$ ', thousands:'.'});
-		// });
-
-		function getType(){
-			var tipoCalc = $("input[name='tipoCalc']:checked").val();
-
-			switch(tipoCalc){
-				case "igualmente":
-					calcIgualgumente();
-					break;
-				case "progressivo":
-					calcProgressivo();
-					break;
-				case "randomico":
-					calcRandomico();
-					break;
-			}
-		}
-
-		function limparMascara(valor){
-
-			valor = valor.substring(0,valor.length-3)
-			valor = valor.replaceAll(".","");
-			// valor = valor.replaceAll("R$","");
-			// valor = valor.replaceAll(",","");
-			return valor;
-		}
-
-
-		function calcIgualgumente(){
-			var valor = $("#valor").val();
-
-			// valor = limparMascara(valor);
-
-			console.log("mascara"+valor);
-
-			var semanas = $("#semanas").val();
-
-			var resultado = valor / semanas;
-
-			for( var i = 1; i <= semanas; i++){
-				$("<p/>").text("Semana "+i+": R$"+ resultado).appendTo(".resultado");
-			}
-
-			$("#valorEconomizado").html("R$:"+valor);
-		}
-
-		function calcProgressivo(){
-
-			var valor = $("#valor").val();
-			var semanas = $("#semanas").val();
-
-			var resultado = 0;
-			var contador = 1;
-
-			do{
-				$("<p/>").text("Semana "+contador+": R$"+ contador).appendTo(".resultado");
-				resultado = resultado + contador;
-				contador++;
-			}while(resultado < valor);
-
-			$("#valorEconomizado").html("R$:"+resultado);
-		}
-
-		function calcRandomico(){
-
-			var valor = $("#valor").val();
-
-			var resultado = 0;
-			var contador = 1;
-
-			do{
-				var calc = Math.random() * 1000;
-
-				$("<p/>").text("Semana "+contador+": R$"+ calc).appendTo(".resultado");
-				resultado = resultado + calc;
-				contador++;
-
-			}while(resultado < valor);
-			$("#valorEconomizado").html("R$:"+resultado);
-		}
-
-	</script>
+	<script type="text/javascript" src="js/content.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -111,27 +23,61 @@
 
 	<article class="row">
 		<section class="conteudo" class="col-lg-7">
-			<form action="javascript:void(getType())">
 
-				 <label class="radio-inline"><input type="radio" class="tipoCalculo" name="tipoCalc" value="igualmente"> Igualmente</label>
-				<label class="radio-inline"><input type="radio" class="tipoCalculo" name="tipoCalc" value="progressivo"> Progressivo</label>
-				<label class="radio-inline"><input type="radio" class="tipoCalculo" name="tipoCalc" value="randomico"> Randômico</label>	
+			<h1>Faça seu Cálculo Rápido!</h1>
+
+			
+
+			<form class="calculadora" action="javascript:void(getType())">
+
+				<div class="form-group">
+					<label>Para que será este cálculo?</label>
+					<input type="text" id="paraQue" name="nome">
+				</div>
+
+				 <label class="radio-inline">
+				 	<input type="radio" class="tipoCalculo" name="tipoCalc" 
+				 	value="igualmente" checked="true"
+				 	onclick="retirarInput('igualmente')"> 
+				 	Igualmente
+				 </label>
+				<label class="radio-inline">
+					<input type="radio" class="tipoCalculo" name="tipoCalc" 
+					value="progressivo" onclick="retirarInput('progressivo')"> Progressivo
+				</label>
+				<label class="radio-inline">
+				<input type="radio" class="tipoCalculo" name="tipoCalc" 
+				value="randomico" onclick="retirarInput('progressivo')"> Randômico
+				</label>	
 
 				<div class="form-group">
 						<label>Valor Pretendido:</label>
-						<input id="valor" class="form-control" name="valor" value="" placeholder="Valor" required>
+						<input id="valor" class="form-control" name="valor" value="" placeholder="Valor" required pattern="[0-9]+$">
 				</div>
 				<div class="form-group">
 						<label>Quantidade de Semanas</label>
-						<input id="semanas" class="form-control" name="semanas" value="" placeholder="Semanas" required>
+						<input id="semanas" class="form-control" name="semanas" value="" placeholder="Semanas" required pattern="[0-9]+$">
 				</div>
 				<button type="submit" class="btn btn-primary btn-send">Enviar</button> 
 
+				<button class="btn btn-primary btn-send" onclick="exportar()">Exportar</button> 
 			</form>
 
 			<div class="resultado">
 				<h2>Resultado</h2>
 				<h3>Valor total economizado: <bold id="valorEconomizado">0</bold></h3>
+
+				<table class="table tablew-striped">
+					<thead>
+						<tr>
+							<th>Semana</th>
+							<th>Depositar (R$)</th>
+							<th>Valor Acumulado (R$)</th>
+						</tr>
+					</thead>
+					<tbody id="respostas">
+					</tbody>
+				</table>
 			</div>
 		</section>
 
