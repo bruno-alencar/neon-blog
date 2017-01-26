@@ -123,3 +123,6 @@ aside {
         height: 240px
     }
 }
+.auth0-lock-close-button { 
+    display:none;
+}
