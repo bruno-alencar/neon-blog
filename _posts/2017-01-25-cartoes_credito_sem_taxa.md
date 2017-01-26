@@ -3,7 +3,7 @@ layout: post
 title: 3 cartões de crédito sem a temida taxa anual
 
 images: 
-   - url: /assets/images/cartoes-sem-taxa.jpg
+  - url: /assets/images/cartoes-sem-taxa.jpg
     alt: Moça ouvindo musica
     title: Dinheiro
   - url: /assets/images/thumb-cartoes-sem-taxa.jpg
