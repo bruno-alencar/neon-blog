@@ -262,8 +262,8 @@
 						<input id="ip" class="form-control" name="Ip" value="">
 					</div>
         <button type="submit" class="btn btn-primary btn-lg" style="margin: 20px;">Calcular</button>
-        <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
-        	<a href="fiquezul.me/game/respostas/{{teste}}" class="btn btn-primary btn-lg" ng-show="teste">Ver resultado</a>
+        <div class="row" style="margin-top: 20px; margin-bottom: 20px;" ng-if="teste">
+        	<a href="fiquezul.me/game/respostas/{{teste}}" class="btn btn-primary btn-lg" >Ver resultado</a>
         </div>
         
     </form>

@@ -109,7 +109,7 @@ app.controller('PerguntasController', function ($scope, $rootScope) {
 		    console.log(rico);
 		    var random = Math.trunc(rico);
 		    console.log(random);
-            if (random = 1 && random == 2) {
+            if (random == 1 || random == 2) {
             	var num = Math.random() * (11 - 1) + 1;
 		    	console.log(num);
 		    	var ano = Math.trunc(num);
