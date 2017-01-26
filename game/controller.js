@@ -58,14 +58,20 @@ app.controller('PerguntasController', function ($scope, $rootScope) {
             console.log("primeira resposta");
             $scope.teste = 1;
             console.log($scope.teste);
+            salvar();
+            return;
         }
         if ($scope.dados.primeira == 'azul' && $scope.dados.quarta && $scope.dados.quinta && $scope.dados.setima && !$scope.dados.oitava && !$scope.dados.decima) {
             console.log("segunda resposta");
             $scope.teste = 2;
+            salvar();
+            return;
         }
         if ($scope.dados.primeira == 'azul' && $scope.dados.quarta && $scope.dados.quinta && !$scope.dados.setima && $scope.dados.oitava && !$scope.dados.decimaPrimeira) {
             console.log("terceira resposta");
             $scope.teste = 3;
+            salvar();
+            return;
             
         }
 
@@ -73,11 +79,15 @@ app.controller('PerguntasController', function ($scope, $rootScope) {
         if ($scope.dados.primeira == 'vermelho' && $scope.dados.setima && !$scope.dados.oitava && $scope.dados.decima) {
             console.log("quarta resposta");
             $scope.teste = 4;
+            salvar();
+            return;
             
         }
         if ($scope.dados.primeira == 'vermelho' && $scope.dados.segunda == 'amarelo' && $scope.dados.terceira == 'amarelo' && !$scope.dados.nona && !$scope.dados.decima) {
             console.log("quinta resposta");
             $scope.teste = 5;
+            salvar();
+            return;
             
         }
 
@@ -85,22 +95,30 @@ app.controller('PerguntasController', function ($scope, $rootScope) {
         if ($scope.dados.primeira == 'cinza' && $scope.dados.segunda == 'cinza' && $scope.dados.sexta && $scope.dados.setima && $scope.dados.nona && $scope.dados.decimaPrimeira) {
             console.log("sexta resposta");
             $scope.teste = 6;
+            salvar();
+            return;
             
         }
         if ($scope.dados.primeira == 'cinza' && $scope.dados.segunda == 'amarelo' && $scope.dados.terceira == 'vermelho' && !$scope.dados.quarta && $scope.dados.nona) {
             console.log("setima resposta");
             $scope.teste = 7;
+            salvar();
+            return;
         }
 
 
         if ($scope.dados.primeira == 'amarelo' && $scope.dados.quinta && !$scope.dados.sexta && !$scope.dados.setima && !$scope.dados.decima) {
             console.log("oitava resposta");
             $scope.teste = 8;
+            salvar();
+            return;
             
         }
         if ($scope.dados.primeira == 'amarelo' && !$scope.dados.quarta && $scope.dados.quinta && $scope.dados.setima && !$scope.dados.oitava) {
             console.log("nona resposta");
             $scope.teste = 9;
+            salvar();
+            return;
             
         }
         else {

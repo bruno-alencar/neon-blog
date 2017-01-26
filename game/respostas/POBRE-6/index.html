@@ -67,17 +67,14 @@
 </head>
 
 <body class="pad">
-    <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=238244913285421";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-    </script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=238244913285421";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <h2>Com base em estudos feitos na NASA: <br>isto acontecerá na sua vida financeira.</h2>
 	<img src="../resultados/POBRE-6.png" style="margin-top: 50px; margin-bottom: 20px;display: block; margin-right: auto; margin-left: auto;">
     <div class="row">
@@ -85,7 +82,7 @@
         <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=www.fiquezul.me%20Entrem" data-size="large">Tweet</a>
     </div>
     <div class="row">
-        <a href="http://fiquezul.me/rico" class="btn btn-primary btn-lg" style="margin: 20px;">VOLTAR</a>
+        <a href="http://fiquezul.me/game" class="btn btn-primary btn-lg" style="margin: 20px;">VOLTAR</a>
     </div>
     
 
