@@ -23,44 +23,69 @@
  -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css">
-	<script type="text/javascript">
-		
-		$.get("https://ipinfo.io", function(response) {
+    <script type="text/javascript">
+    	
+    	$.get("https://ipinfo.io", function(response) {
     		$("#ip").val(response.ip);
     		$("#data").val(new Date().toLocaleString());
 
-		}, "jsonp");
+    	}, "jsonp");
 
-		function salvar(){
-			var nome = $("#nome").val();
-			var sobrenome = $("#sobrenome").val();
-			var email = $("#email").val();
-			var data = $("#data").val();
-			var ip = $("#ip").val();
+    	function salvar(){
+    		var nome = $("#nome").val();
+    		var sobrenome = $("#sobrenome").val();
+    		var email = $("#email").val();
+    		var data = $("#data").val();
+    		var ip = $("#ip").val();
 
-			$.post("https://sheetsu.com/apis/v1.0/3369238049e8",{
-				Nome: nome,
-				Sobrenome: sobrenome,
-				Email: email,
-				Data: data,
-				Ip: ip
-			});
+    		$.post("https://sheetsu.com/apis/v1.0/3369238049e8",{
+    			Nome: nome,
+    			Sobrenome: sobrenome,
+    			Email: email,
+    			Data: data,
+    			Ip: ip
+    		});
 
-			alert("Cadastro enviado com sucesso!");
-			
-			limpar();
-		}
+    		alert("Cadastro enviado com sucesso!");
+    		
+    		limpar();
+    	}
 
-		function limpar(){
-			var url = "https://dl.dropboxusercontent.com/u/104095732/downloads-fique-azul/pack_materials.zip";
-			$(location).attr('href',url);
-		}
+    	function limpar(){
+    		var url = "https://dl.dropboxusercontent.com/u/104095732/downloads-fique-azul/pack_materials.zip";
+    		$(location).attr('href',url);
+    	}
 
 
-	</script>
-
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
+    </script>
+    <script src="https://cdn.auth0.com/js/lock/10.8.0/lock.min.js"></script>
+    <script>
+    var lock = new Auth0Lock("uapYHKi1KeyZhxuWJRV7g0OfXbjBoFhS","startops7.auth0.com");
+    lock.on("authenticated", function(authResult) {
+    localStorage.setItem('id_token', authResult.idToken);
+    });
+    var init = function() {
+    var id_token = localStorage.getItem('id_token');
+    if (!id_token) {
+        lock.show({
+        closable:false,
+        allowedConnections: ["google-oauth2","facebook"],
+        theme: {"logo":"http://i.imgur.com/XfS6MuS.png","primaryColor":"#2196f3"},
+        languageDictionary: {"title":"Fique azul"},
+        language: "pt-br",
+        auth: {
+        responseType: 'token',
+        params: {
+            scope: 'openid email'
+          }
+        }
+        });
+    }
+    };
+    init();
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
 <body>
 
 	<article class="row">
