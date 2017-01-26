@@ -18,3 +18,6 @@ body{
 	box-shadow: 10px 10px 5px #888888;
     transform-origin: bottom left;
 }
+.auth0-lock-close-button { 
+    display:none;
+}
