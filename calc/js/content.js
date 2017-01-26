@@ -1,8 +1,4 @@
 
-		// $(function(){
- 	// 		 $("#valor").maskMoney({prefix:'R$ ', thousands:'.'});
-		// });
-
 		window.onload = retirarInput("igualmente");
 
 		function getType(){
@@ -132,4 +128,12 @@
 
 		function exportar(){
 			var nome = $("#paraQue").val();
+
+			var docDefinition = {
+				content:"Teste"
+			}
+
+			pdfMake.createPdf(docDefinition).open();
 		}
+
+

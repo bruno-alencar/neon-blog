@@ -10,10 +10,12 @@
 	<meta name="viewport" content="width-device-width, initial-scale=1">
 
 	<link rel="shortcut icon" href="img/favicon.ico" />
-
-	<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
- -->
+ 	
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+	<script type="text/javascript" src="https://raw.githubusercontent.com/bpampuch/pdfmake/master/build/pdfmake.min.js"></script>
+
+	<script type="text/javascript" src="https://raw.githubusercontent.com/bpampuch/pdfmake/master/build/pdfmake.min.js"></script>
 
 	<script type="text/javascript" src="js/content.js"></script>
 
@@ -52,13 +54,11 @@
 
 			<h1>Faça seu Cálculo Rápido!</h1>
 
-			
-
 			<form class="calculadora" action="javascript:void(getType())">
 
 				<div class="form-group">
 					<label>Para que será este cálculo?</label>
-					<input type="text" id="paraQue" name="nome" placeholder="Ex: Viagem, Comprar Carro">
+					<input id="paraQue" name="nome" placeholder="Ex: Viagem, Comprar Carro">
 				</div>
 
 				 <label class="radio-inline">
