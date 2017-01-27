@@ -3,8 +3,20 @@
 
 		function getType(){
 			var tipoCalc = $("input[name='tipoCalc']:checked").val();
-			salvar();
 			
+
+
+		$.get("https://ipinfo.io", function(response) {
+			console.log(response);
+    		$("#ip").val(response.ip);
+    		console.log("ip"+ response.ip);
+    		$("#data").val(new Date().toLocaleString());
+
+		}, "jsonp");
+
+
+
+
 			switch(tipoCalc){
 				case "igualmente":
 					limparTabela();
@@ -64,6 +76,9 @@
 
 				
 			}
+
+
+		salvar();
 		}
 
 		function calcProgressivo(){
@@ -93,6 +108,7 @@
 	
 			}while(resultado < valor);
 
+		salvar();
 		}
 
 		function calcRandomico(){
@@ -124,6 +140,9 @@
 				contador++;
 
 			}while(resultado < valor);
+
+			
+		salvar();
 		}
 
 
@@ -138,13 +157,7 @@
 		}
 
 
-	$.get("https://ipinfo.io", function(response) {
-			console.log(response);
-    		$("#ip").val(response.ip);
-    		$("#data").val(new Date().toLocaleString());
-
-		}, "jsonp");
-
+	
 
 		function salvar(){
 
@@ -152,17 +165,17 @@
 			var ip = $("#ip").val();
 
 			$.post("https://sheetsu.com/apis/v1.0/3369238049e8",{
+				Nome: '',
+				Sobrenome: '',
+				Email: '',
 				Data: data,
 				Ip: ip
 			});
 
-			alert("Cadastro enviado com sucesso!");
-
-			limpar();
+			// limpar();
 		}
 
 		function limpar(){
 			$("#data").val("");
 			$("#ip").val("");
-			location.reload();
 		}
