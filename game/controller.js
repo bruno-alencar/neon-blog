@@ -41,7 +41,7 @@ app.controller('PerguntasController', function ($scope, $rootScope) {
 			var data = $("#data").val();
 			var ip = $("#ip").val();
 
-			$.post("https://sheetsu.com/apis/v1.0/3369238049e8",{
+			$.post("https://sheetsu.com/apis/v1.0/fb255bdc36db",{
 				Nome: nome,
 				Email: email,
 				Data: data,
